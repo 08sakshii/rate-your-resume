@@ -1,3 +1,6 @@
+# ==== Node ====
+node_modules/
+
 # ==== Python / ML service ====
 __pycache__/
 *.pyc
