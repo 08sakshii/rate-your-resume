@@ -5,6 +5,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
+const analysisRoutes = require('./routes/analysis.routes');
 
 const app = express();
 
@@ -15,6 +16,11 @@ app.use(cors());
 // express.json() parses incoming requests with a JSON body so req.body is
 // available in route handlers. Without this, req.body would be undefined.
 app.use(express.json());
+
+// --- Routes ---
+// /api/analyze handles PDF resume uploads (multer, memoryStorage).
+// Text extraction and analysis are wired in here in subsequent tickets.
+app.use('/api/analyze', analysisRoutes);
 
 // --- Start server only after DB connects ---
 // We intentionally await the DB connection before calling app.listen().
