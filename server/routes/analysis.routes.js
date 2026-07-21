@@ -17,7 +17,7 @@
 
 const express = require('express');
 const multer = require('multer');
-const { confirmUpload } = require('../controllers/analysis.controller');
+const { analyzeResume } = require('../controllers/analysis.controller');
 
 const router = express.Router();
 
@@ -92,7 +92,7 @@ router.post('/', (req, res) => {
     }
 
     // No upload error — hand off to the controller
-    return confirmUpload(req, res);
+    return analyzeResume(req, res);
   });
 });
 
