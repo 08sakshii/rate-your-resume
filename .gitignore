@@ -24,3 +24,5 @@ ml-service/app/models/*.pkl
 .DS_Store
 Thumbs.db
 .vscode/
+test.html
+test-upload.html
