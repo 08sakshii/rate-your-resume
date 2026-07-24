@@ -17,7 +17,7 @@ Coming soon
 - Validation: Zod
 
 ## Status
-🚧 In Development — Sprint 1 of 4
+Done — Sprint 1 of 4
 
 ## Architecture
 Diagram coming as build progresses
